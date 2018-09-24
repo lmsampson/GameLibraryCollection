@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WishlistViewController.swift
 //  GameLibraryCollections
 //
 //  Created by Lisa Sampson on 9/24/18.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WishlistViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
-
 }
-
