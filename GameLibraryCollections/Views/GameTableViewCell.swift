@@ -1,23 +1,23 @@
 //
-//  SearchTableViewCell.swift
+//  GameTableViewCell.swift
 //  GameLibraryCollections
 //
-//  Created by Lisa Sampson on 9/24/18.
+//  Created by Lisa Sampson on 9/25/18.
 //  Copyright © 2018 Lisa M Sampson. All rights reserved.
 //
 
 import UIKit
 
-class SearchTableViewCell: UITableViewCell {
-    
+class GameTableViewCell: UITableViewCell {
+
     func updateViews() {
-        guard let game = gameRep else { return }
+        guard let game = game else { return }
         
         gameLabel.text = game.name
         //coverImageView.image = game.coverArt
     }
     
-    var gameRep: GameRepresentation? {
+    var game: Game? {
         didSet {
             updateViews()
         }
@@ -25,5 +25,5 @@ class SearchTableViewCell: UITableViewCell {
     
     @IBOutlet weak var gameLabel: UILabel!
     @IBOutlet weak var coverImageView: UIImageView!
-    
+
 }

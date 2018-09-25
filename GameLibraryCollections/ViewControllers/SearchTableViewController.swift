@@ -31,18 +31,15 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gameController.searchedGames.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GameCell", for: indexPath) as! SearchTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GameSearchedCell", for: indexPath) as! SearchTableViewCell
         
-        //cell.delegate = self
+        let gameRep = gameController.searchedGames[indexPath.row]
+        cell.gameRep = gameRep
 
         return cell
     }
@@ -50,7 +47,13 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "SearchSegue" {
+            let destinationVC = segue.destination as! GameDetailViewController
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            
+            destinationVC.gameController = gameController
+            destinationVC.gameRep = gameController.searchedGames[indexPath.row]
+        }
     }
 
     // MARK: - Properties

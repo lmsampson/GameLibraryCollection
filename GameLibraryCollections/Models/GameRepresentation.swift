@@ -8,6 +8,28 @@
 
 import Foundation
 
-struct GameRepresentation: Equatable, Codable {
-    
+struct GameRepresentation: Equatable {
+    let name: String
+    let summary: String?
+    let identifier: Int64
+    let coverArt: String?
+}
+
+func ==(lhs: GameRepresentation, rhs: Game) -> Bool {
+    return lhs.name == rhs.name &&
+        lhs.summary == rhs.summary &&
+        lhs.identifier == rhs.identifier &&
+        lhs.coverArt == rhs.coverArt
+}
+
+func ==(lhs: Game, rhs: GameRepresentation) -> Bool {
+    return rhs == lhs
+}
+
+func !=(lhs: GameRepresentation, rhs: Game) -> Bool {
+    return !(rhs == lhs)
+}
+
+func !=(lhs: Game, rhs: GameRepresentation) -> Bool {
+    return rhs != lhs
 }
