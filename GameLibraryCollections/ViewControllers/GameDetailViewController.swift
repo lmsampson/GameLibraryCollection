@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class GameDetailViewController: UIViewController {
 
@@ -17,19 +18,26 @@ class GameDetailViewController: UIViewController {
     }
     
     func updateViews() {
+        
+        coverImageView.image = nil
+        
         if let game = game {
             
             if game.gameIsOwned == true {
                 nameLabel.text = game.name
                 summaryLabel.text = game.summary
-                //coverImageView.image = game.coverArt
+                if let coverArt = game.coverArt {
+                    coverImageView.sd_setImage(with: URL(string: "https:\(coverArt)"))
+                }
                 wishlistButton.isHidden = true
                 ownedGamesButton.isHidden = true
                 
             } else if game.gameIsOwned == false {
                 nameLabel.text = game.name
                 summaryLabel.text = game.summary
-                //coverImageView.image = game.coverArt
+                if let coverArt = game.coverArt {
+                    coverImageView.sd_setImage(with: URL(string: "https:\(coverArt)"))
+                }
                 wishlistButton.isHidden = true
                 
             }
@@ -37,7 +45,9 @@ class GameDetailViewController: UIViewController {
         } else if let gameRep = gameRep {
             nameLabel.text = gameRep.name
             summaryLabel.text = gameRep.summary
-            //coverImageView.image = gameRep.coverArt
+            if let coverArt = gameRep.coverArt {
+                coverImageView.sd_setImage(with: URL(string: "https:\(coverArt)"))
+            }
             
         } else {
             NSLog("Error: no game found.")

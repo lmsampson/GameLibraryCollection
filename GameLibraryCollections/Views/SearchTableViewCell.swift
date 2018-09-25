@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class SearchTableViewCell: UITableViewCell {
     
@@ -14,7 +15,15 @@ class SearchTableViewCell: UITableViewCell {
         guard let game = gameRep else { return }
         
         gameLabel.text = game.name
-        //coverImageView.image = game.coverArt
+        if let coverArt = game.coverArt {
+            coverImageView.sd_setImage(with: URL(string: "https:\(coverArt)"))
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        coverImageView.image = nil
     }
     
     var gameRep: GameRepresentation? {
