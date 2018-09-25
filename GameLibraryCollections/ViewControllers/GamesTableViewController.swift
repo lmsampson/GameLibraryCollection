@@ -99,7 +99,7 @@ class GamesTableViewController: UITableViewController, NSFetchedResultsControlle
     lazy var fetchedResultsController: NSFetchedResultsController<Game> = {
         let fetchRequest: NSFetchRequest<Game> = Game.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-        fetchRequest.predicate = NSPredicate(format: "gameIsOwned == %@", gameIsOwned)
+        fetchRequest.predicate = NSPredicate(format: "gameIsOwned == %@", NSNumber(value: gameIsOwned))
         
         let moc = CoreDataStack.shared.mainContext
         
@@ -115,6 +115,6 @@ class GamesTableViewController: UITableViewController, NSFetchedResultsControlle
     // MARK: - Properties
     
     let gameController = GameController()
-    var gameIsOwned: Bool = true
+    @IBInspectable var gameIsOwned: Bool = true
 
 }
