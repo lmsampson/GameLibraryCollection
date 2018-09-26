@@ -11,6 +11,10 @@ import CoreData
 
 class GameController {
     
+    init(dataLoader: NetworkDataLoader = URLSession.shared) {
+        self.dataLoader = dataLoader
+    }
+    
     func createOwnedGame(from gameRep: GameRepresentation) {
         let moc = CoreDataStack.shared.container.newBackgroundContext()
         
@@ -63,7 +67,7 @@ class GameController {
     func delete(game: Game) {
         let moc = CoreDataStack.shared.mainContext
         
-        moc.perform {
+        moc.performAndWait {
             do {
             moc.delete(game)
             try CoreDataStack.shared.save(context: moc)
@@ -96,7 +100,7 @@ class GameController {
             "Accept": "application/json"
         ]
         
-        URLSession.shared.dataTask(with: request) { (data, _, error) in
+        dataLoader.loadData(using: request) { (data, error) in
             if let error = error {
                 NSLog("Error searching for game with search: \(searchTerm) \(error)")
                 completion(error)
@@ -118,12 +122,13 @@ class GameController {
                 NSLog("Error decoding JSON: \(error)")
                 completion(error)
             }
-        }.resume()
+        }
     }
     
     // MARK: - Properties
     
     private let baseURL = URL(string: "https://api-endpoint.igdb.com/")!
+    private let dataLoader: NetworkDataLoader
     
     var searchedGames: [GameRepresentation] = []
     

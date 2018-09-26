@@ -14,7 +14,9 @@ class GamesTableViewController: UITableViewController, NSFetchedResultsControlle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        if gameIsOwned == false {
+            tabBarItem.title = "Wishlist"
+        }
     }
 
     // MARK: - Table view data source

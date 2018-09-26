@@ -15,7 +15,6 @@
 		FF7008AA215946E800C52C6C /* GameLibraryCollections.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF7008A8215946E800C52C6C /* GameLibraryCollections.xcdatamodeld */; };
 		FF7008AC215946E900C52C6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF7008AB215946E900C52C6C /* Assets.xcassets */; };
 		FF7008AF215946E900C52C6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF7008AD215946E900C52C6C /* LaunchScreen.storyboard */; };
-		FF7008BA215946E900C52C6C /* GameLibraryCollectionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7008B9215946E900C52C6C /* GameLibraryCollectionsTests.swift */; };
 		FF7008C5215946E900C52C6C /* GameLibraryCollectionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7008C4215946E900C52C6C /* GameLibraryCollectionsUITests.swift */; };
 		FF7008D32159794C00C52C6C /* GamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7008D22159794C00C52C6C /* GamesTableViewController.swift */; };
 		FF7008D72159798300C52C6C /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7008D62159798300C52C6C /* SearchTableViewController.swift */; };
@@ -27,6 +26,10 @@
 		FF7008F1215995A300C52C6C /* GameRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7008F0215995A300C52C6C /* GameRepresentation.swift */; };
 		FF7008F52159BE2200C52C6C /* GameRepresentation+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7008F42159BE2200C52C6C /* GameRepresentation+Decodable.swift */; };
 		FF7008F7215ABF9700C52C6C /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7008F6215ABF9700C52C6C /* GameTableViewCell.swift */; };
+		FF7008F9215AE74300C52C6C /* NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7008F8215AE74300C52C6C /* NetworkDataLoader.swift */; };
+		FF7008FB215AE84700C52C6C /* GameControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7008FA215AE84700C52C6C /* GameControllerTests.swift */; };
+		FF7008FD215AEBE700C52C6C /* TestJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7008FC215AEBE700C52C6C /* TestJSON.swift */; };
+		FF7008FF215C393800C52C6C /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7008FE215C393800C52C6C /* AppearanceHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +67,6 @@
 		FF7008AE215946E900C52C6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF7008B0215946E900C52C6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF7008B5215946E900C52C6C /* GameLibraryCollectionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameLibraryCollectionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF7008B9215946E900C52C6C /* GameLibraryCollectionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLibraryCollectionsTests.swift; sourceTree = "<group>"; };
 		FF7008BB215946E900C52C6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF7008C0215946E900C52C6C /* GameLibraryCollectionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameLibraryCollectionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7008C4215946E900C52C6C /* GameLibraryCollectionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLibraryCollectionsUITests.swift; sourceTree = "<group>"; };
@@ -79,6 +81,10 @@
 		FF7008F0215995A300C52C6C /* GameRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepresentation.swift; sourceTree = "<group>"; };
 		FF7008F42159BE2200C52C6C /* GameRepresentation+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameRepresentation+Decodable.swift"; sourceTree = "<group>"; };
 		FF7008F6215ABF9700C52C6C /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
+		FF7008F8215AE74300C52C6C /* NetworkDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataLoader.swift; sourceTree = "<group>"; };
+		FF7008FA215AE84700C52C6C /* GameControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerTests.swift; sourceTree = "<group>"; };
+		FF7008FC215AEBE700C52C6C /* TestJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestJSON.swift; sourceTree = "<group>"; };
+		FF7008FE215C393800C52C6C /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +176,9 @@
 		FF7008B8215946E900C52C6C /* GameLibraryCollectionsTests */ = {
 			isa = PBXGroup;
 			children = (
-				FF7008B9215946E900C52C6C /* GameLibraryCollectionsTests.swift */,
 				FF7008BB215946E900C52C6C /* Info.plist */,
+				FF7008FA215AE84700C52C6C /* GameControllerTests.swift */,
+				FF7008FC215AEBE700C52C6C /* TestJSON.swift */,
 			);
 			path = GameLibraryCollectionsTests;
 			sourceTree = "<group>";
@@ -210,6 +217,8 @@
 				FF7008A1215946E800C52C6C /* AppDelegate.swift */,
 				FF7008AB215946E900C52C6C /* Assets.xcassets */,
 				FF7008B0215946E900C52C6C /* Info.plist */,
+				FF7008F8215AE74300C52C6C /* NetworkDataLoader.swift */,
+				FF7008FE215C393800C52C6C /* AppearanceHelper.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -318,6 +327,7 @@
 					};
 					FF7008B4215946E900C52C6C = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 						TestTargetID = FF70089D215946E800C52C6C;
 					};
 					FF7008BF215946E900C52C6C = {
@@ -472,7 +482,9 @@
 				FF7008D92159799900C52C6C /* GameDetailViewController.swift in Sources */,
 				FF7008F1215995A300C52C6C /* GameRepresentation.swift in Sources */,
 				FF7008EF2159888A00C52C6C /* Game+Convenience.swift in Sources */,
+				FF7008FF215C393800C52C6C /* AppearanceHelper.swift in Sources */,
 				FF7008EA2159824000C52C6C /* GameController.swift in Sources */,
+				FF7008F9215AE74300C52C6C /* NetworkDataLoader.swift in Sources */,
 				FF7008D72159798300C52C6C /* SearchTableViewController.swift in Sources */,
 				FF7008F52159BE2200C52C6C /* GameRepresentation+Decodable.swift in Sources */,
 				FF7008ED2159880B00C52C6C /* CoreDataStack.swift in Sources */,
@@ -488,7 +500,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF7008BA215946E900C52C6C /* GameLibraryCollectionsTests.swift in Sources */,
+				FF7008FB215AE84700C52C6C /* GameControllerTests.swift in Sources */,
+				FF7008FD215AEBE700C52C6C /* TestJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +708,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LA5UAXN45;
 				INFOPLIST_FILE = GameLibraryCollectionsTests/Info.plist;
@@ -705,6 +719,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lisamsampson.GameLibraryCollectionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameLibraryCollections.app/GameLibraryCollections";
@@ -717,6 +732,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LA5UAXN45;
 				INFOPLIST_FILE = GameLibraryCollectionsTests/Info.plist;

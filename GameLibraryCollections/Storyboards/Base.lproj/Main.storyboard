@@ -13,9 +13,17 @@
         <scene sceneID="SN9-nH-sLL">
             <objects>
                 <navigationController id="o0w-K1-fsh" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f60-GJ-x9F">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="f60-GJ-x9F">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="kek-Mk-4mL" kind="relationship" relationship="rootViewController" id="Lb1-3x-YrE"/>
@@ -25,15 +33,17 @@
             </objects>
             <point key="canvasLocation" x="-1073" y="-134"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Game Library-->
         <scene sceneID="nFp-go-NNk">
             <objects>
                 <tabBarController id="kek-Mk-4mL" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="qzO-eB-dXP"/>
+                    <navigationItem key="navigationItem" title="Game Library" id="qzO-eB-dXP"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uP3-Hp-Q2p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.23529411764705882" green="0.83529411764705885" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="7KP-kH-RAO" kind="relationship" relationship="viewControllers" id="xU0-Vp-HUZ"/>
@@ -52,24 +62,24 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PJz-eW-LOx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameCell" rowHeight="58" id="RwO-x4-0fF" customClass="GameTableViewCell" customModule="GameLibraryCollections" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="58"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameCell" rowHeight="85" id="RwO-x4-0fF" customClass="GameTableViewCell" customModule="GameLibraryCollections" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RwO-x4-0fF" id="8GI-nm-FhZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="57.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TQ7-Y4-f7s">
-                                            <rect key="frame" x="8" y="4.5" width="50" height="50"/>
+                                            <rect key="frame" x="8" y="4" width="75" height="75"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="Zdp-ju-lUr"/>
-                                                <constraint firstAttribute="height" constant="50" id="lsE-O6-YpU"/>
+                                                <constraint firstAttribute="width" constant="75" id="Zdp-ju-lUr"/>
+                                                <constraint firstAttribute="height" constant="75" id="lsE-O6-YpU"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nS4-Pm-v9h">
-                                            <rect key="frame" x="66" y="19" width="293" height="20.5"/>
+                                            <rect key="frame" x="91" y="31" width="268" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -84,6 +94,7 @@
                                         <constraint firstItem="TQ7-Y4-f7s" firstAttribute="leading" secondItem="8GI-nm-FhZ" secondAttribute="leading" constant="8" id="fJy-g6-nI3"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="coverImageView" destination="TQ7-Y4-f7s" id="4HS-5s-lw3"/>
                                     <outlet property="gameLabel" destination="nS4-Pm-v9h" id="Sbp-ux-CyR"/>
@@ -96,7 +107,7 @@
                             <outlet property="delegate" destination="V9a-7w-vIC" id="oIs-qe-Rfw"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Wishlist" id="IAW-Qs-QF5"/>
+                    <tabBarItem key="tabBarItem" title="Wishlist" image="Icon-29-2" id="IAW-Qs-QF5"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="gameIsOwned" value="NO"/>
                     </userDefinedRuntimeAttributes>
@@ -112,26 +123,26 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LSW-33-SmR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameCell" rowHeight="58" id="u9q-fw-U8q" customClass="GameTableViewCell" customModule="GameLibraryCollections" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="58"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameCell" rowHeight="85" id="u9q-fw-U8q" customClass="GameTableViewCell" customModule="GameLibraryCollections" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u9q-fw-U8q" id="afv-Bh-q4Q">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="57.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="maZ-ca-5or">
-                                            <rect key="frame" x="8" y="4.5" width="50" height="50"/>
+                                            <rect key="frame" x="8" y="4" width="75" height="75"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="0LR-Tk-TWr"/>
-                                                <constraint firstAttribute="height" constant="50" id="OJj-Ga-WbJ"/>
+                                                <constraint firstAttribute="width" constant="75" id="0LR-Tk-TWr"/>
+                                                <constraint firstAttribute="height" constant="75" id="OJj-Ga-WbJ"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFZ-sp-eS7">
-                                            <rect key="frame" x="66" y="19" width="293" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <rect key="frame" x="91" y="31" width="268" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -144,10 +155,11 @@
                                         <constraint firstItem="maZ-ca-5or" firstAttribute="top" secondItem="afv-Bh-q4Q" secondAttribute="top" constant="4" id="qNY-bT-AYO"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="coverImageView" destination="maZ-ca-5or" id="kHX-ME-qvS"/>
                                     <outlet property="gameLabel" destination="xFZ-sp-eS7" id="dUY-MC-iEU"/>
-                                    <segue destination="G8v-BQ-7ex" kind="show" identifier="GamesSegue" id="mln-24-uUb"/>
+                                    <segue destination="G8v-BQ-7ex" kind="show" identifier="GamesSegue" id="n39-75-Khx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -156,7 +168,7 @@
                             <outlet property="delegate" destination="7KP-kH-RAO" id="kqc-e5-h9d"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Owned Games" id="cne-94-hPw"/>
+                    <tabBarItem key="tabBarItem" title="Owned Games" image="Icon-29" id="cne-94-hPw"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="gameIsOwned" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -194,6 +206,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opT-CD-uMm">
                                 <rect key="frame" x="16" y="356.5" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Add to Wishlist"/>
                                 <connections>
                                     <action selector="wishlistButtonTapped:" destination="G8v-BQ-7ex" eventType="touchUpInside" id="3Vm-Vy-uod"/>
@@ -201,13 +214,15 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xy-pP-YhE">
                                 <rect key="frame" x="16" y="394.5" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Add to Games Owned"/>
                                 <connections>
                                     <action selector="ownedButtonTapped:" destination="G8v-BQ-7ex" eventType="touchUpInside" id="Dd2-6M-pfd"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lth-89-uY4" firstAttribute="leading" secondItem="qp8-0K-oNs" secondAttribute="leading" constant="16" id="23N-FP-fJU"/>
                             <constraint firstItem="7Xy-pP-YhE" firstAttribute="top" secondItem="opT-CD-uMm" secondAttribute="bottom" constant="8" id="5J6-fc-ojC"/>
@@ -226,6 +241,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qp8-0K-oNs"/>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Bs2-7W-CQs"/>
                     <connections>
                         <outlet property="coverImageView" destination="ufx-nN-Dij" id="bd9-cS-qvA"/>
                         <outlet property="nameLabel" destination="Mtc-kP-K6g" id="OsC-a8-dBd"/>
@@ -245,29 +261,29 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bYW-Cx-4M3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="eM6-Hq-Scy">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameSearchedCell" rowHeight="58" id="mi1-Od-TcG" customClass="SearchTableViewCell" customModule="GameLibraryCollections" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="58"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameSearchedCell" rowHeight="85" id="mi1-Od-TcG" customClass="SearchTableViewCell" customModule="GameLibraryCollections" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mi1-Od-TcG" id="sUy-01-ffs">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="57.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MAC-SV-5cN">
-                                            <rect key="frame" x="8" y="4.5" width="50" height="50"/>
+                                            <rect key="frame" x="8" y="4" width="75" height="75"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="9vY-1p-0mA"/>
-                                                <constraint firstAttribute="height" constant="50" id="h4h-aG-KaL"/>
+                                                <constraint firstAttribute="width" constant="75" id="9vY-1p-0mA"/>
+                                                <constraint firstAttribute="height" constant="75" id="h4h-aG-KaL"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvI-oF-fsj">
-                                            <rect key="frame" x="66" y="19" width="293" height="20.5"/>
+                                            <rect key="frame" x="91" y="31" width="268" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -282,6 +298,7 @@
                                         <constraint firstItem="MAC-SV-5cN" firstAttribute="top" secondItem="sUy-01-ffs" secondAttribute="top" constant="4" id="sjs-1f-Xsf"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="coverImageView" destination="MAC-SV-5cN" id="V2O-3K-72Y"/>
                                     <outlet property="gameLabel" destination="pvI-oF-fsj" id="IwS-qq-WoD"/>
@@ -304,7 +321,11 @@
             <point key="canvasLocation" x="568.79999999999995" y="456.52173913043481"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Icon-29" width="29" height="29"/>
+        <image name="Icon-29-2" width="29" height="29"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GbT-fk-fVm"/>
+        <segue reference="JXU-PH-XUB"/>
     </inferredMetricsTieBreakers>
 </document>
