@@ -75,6 +75,23 @@ class GameDetailViewController: UIViewController {
         }
     }
     
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        
+        let gameURL: URL
+        if let game = game {
+            gameURL = game.url!
+        } else if let gameRep = gameRep {
+            gameURL = gameRep.url
+        } else {
+            NSLog("Error: no game found.")
+            return
+        }
+        
+        let activityViewController = UIActivityViewController(activityItems: [gameURL], applicationActivities: [])
+        activityViewController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(activityViewController, animated: true)
+    }
+    
     // MARK: - Properties and Outlets
     
     var gameController: GameController?

@@ -82,7 +82,7 @@ class GameController {
     func searchForGame(with searchTerm: String, completion: @escaping (Error?) -> Void) {
         
         let queryParameters = ["search": searchTerm,
-                               "fields": "name,summary,cover.url",
+                               "fields": "name,url,summary,cover.url",
                                "limit": "50"]
         
         var components = URLComponents(url: baseURL.appendingPathComponent("games/"), resolvingAgainstBaseURL: true)

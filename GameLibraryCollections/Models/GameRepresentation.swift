@@ -13,13 +13,15 @@ struct GameRepresentation: Equatable {
     let summary: String?
     let identifier: Int64
     let coverArt: String?
+    let url: URL
 }
 
 func ==(lhs: GameRepresentation, rhs: Game) -> Bool {
     return lhs.name == rhs.name &&
         lhs.summary == rhs.summary &&
         lhs.identifier == rhs.identifier &&
-        lhs.coverArt == rhs.coverArt
+        lhs.coverArt == rhs.coverArt &&
+        lhs.url == rhs.url
 }
 
 func ==(lhs: Game, rhs: GameRepresentation) -> Bool {
