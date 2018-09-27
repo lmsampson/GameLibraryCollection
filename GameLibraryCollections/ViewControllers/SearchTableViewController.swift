@@ -14,6 +14,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
 
         searchBar.delegate = self
+        self.tableView.separatorStyle = .none
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

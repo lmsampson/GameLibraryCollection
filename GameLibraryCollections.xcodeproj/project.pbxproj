@@ -30,6 +30,7 @@
 		FF7008FB215AE84700C52C6C /* GameControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7008FA215AE84700C52C6C /* GameControllerTests.swift */; };
 		FF7008FD215AEBE700C52C6C /* TestJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7008FC215AEBE700C52C6C /* TestJSON.swift */; };
 		FF7008FF215C393800C52C6C /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7008FE215C393800C52C6C /* AppearanceHelper.swift */; };
+		FF700901215D481800C52C6C /* UIImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF700900215D481800C52C6C /* UIImageHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		FF7008FA215AE84700C52C6C /* GameControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerTests.swift; sourceTree = "<group>"; };
 		FF7008FC215AEBE700C52C6C /* TestJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestJSON.swift; sourceTree = "<group>"; };
 		FF7008FE215C393800C52C6C /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
+		FF700900215D481800C52C6C /* UIImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				FF7008B0215946E900C52C6C /* Info.plist */,
 				FF7008F8215AE74300C52C6C /* NetworkDataLoader.swift */,
 				FF7008FE215C393800C52C6C /* AppearanceHelper.swift */,
+				FF700900215D481800C52C6C /* UIImageHelper.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				FF7008FF215C393800C52C6C /* AppearanceHelper.swift in Sources */,
 				FF7008EA2159824000C52C6C /* GameController.swift in Sources */,
 				FF7008F9215AE74300C52C6C /* NetworkDataLoader.swift in Sources */,
+				FF700901215D481800C52C6C /* UIImageHelper.swift in Sources */,
 				FF7008D72159798300C52C6C /* SearchTableViewController.swift in Sources */,
 				FF7008F52159BE2200C52C6C /* GameRepresentation+Decodable.swift in Sources */,
 				FF7008ED2159880B00C52C6C /* CoreDataStack.swift in Sources */,
