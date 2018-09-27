@@ -25,7 +25,7 @@ class GameDetailViewController: UIViewController {
             
             if game.gameIsOwned == true {
                 nameLabel.text = game.name
-                summaryLabel.text = game.summary
+                summaryTextView.text = game.summary
                 if let coverArt = game.coverArt {
                     coverImageView.sd_setImage(with: URL(string: "https:\(coverArt)"))
                 }
@@ -34,7 +34,7 @@ class GameDetailViewController: UIViewController {
                 
             } else if game.gameIsOwned == false {
                 nameLabel.text = game.name
-                summaryLabel.text = game.summary
+                summaryTextView.text = game.summary
                 if let coverArt = game.coverArt {
                     coverImageView.sd_setImage(with: URL(string: "https:\(coverArt)"))
                 }
@@ -44,7 +44,7 @@ class GameDetailViewController: UIViewController {
             
         } else if let gameRep = gameRep {
             nameLabel.text = gameRep.name
-            summaryLabel.text = gameRep.summary
+            summaryTextView.text = gameRep.summary
             if let coverArt = gameRep.coverArt {
                 coverImageView.sd_setImage(with: URL(string: "https:\(coverArt)"))
             }
@@ -83,7 +83,7 @@ class GameDetailViewController: UIViewController {
     
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var summaryTextView: UITextView!
     @IBOutlet weak var wishlistButton: UIButton!
     @IBOutlet weak var ownedGamesButton: UIButton!
     
